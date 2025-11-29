@@ -222,7 +222,7 @@ uci set passwall2.Direct.ip_list='0.0.0.0/8
 fc00::/7
 fe80::/10
 ff00::/8
-geoip:ir'
+geoip:ru'
 uci set passwall2.Direct.domain_list='regexp:^.+\.ru$
 geosite:category-ru'
 
