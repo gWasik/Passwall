@@ -12,7 +12,7 @@ echo "Running as root..."
 sleep 2
 clear
 
-uci set system.@system[0].zonename='Asia/Tehran'
+uci set system.@system[0].zonename='Europe/Moscow'
 
 uci set network.wan.peerdns="0"
 
@@ -22,7 +22,7 @@ uci set network.wan.dns='1.1.1.1'
 
 uci set network.wan6.dns='2001:4860:4860::8888'
 
-uci set system.@system[0].timezone='<+0330>-3:30'
+uci set system.@system[0].timezone='MSK-3'
 
 uci commit system
 
@@ -39,7 +39,7 @@ if [ "$SNNAP" == "SNAPSHOT" ]; then
 
 echo -e "${YELLOW} SNAPSHOT Version Detected ! ${NC}"
 
-rm -f passwalls.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/main/passwalls.sh && chmod 777 passwalls.sh && sh passwalls.sh
+rm -f passwalls.sh && wget https://raw.githubusercontent.com/gWasik/Passwall/main/passwalls.sh && chmod 777 passwalls.sh && sh passwalls.sh
 
 exit 1
 
@@ -105,12 +105,15 @@ sleep 2
 
 >/etc/banner
 
-echo "    ___    __  ___________  __  ______  __________ ___________   __
-   /   |  /  |/  /  _/ __ \/ / / / __ \/ ___/ ___// ____/  _/ | / /
-  / /| | / /|_/ // // /_/ / /_/ / / / /\__ \\__ \ / __/  / //  |/ /
- / ___ |/ /  / // // _  _/ __  / /_/ /___/ /__/ / /____/ // /|  /
-/_/  |_/_/  /_/___/_/ |_/_/ /_/\____//____/____/_____/___/_/ |_/                                                                                                
-telegram : @AmirHosseinTSL" >> /etc/banner
+echo "
+  ________.____         .__ _______          __    __________                        __      __        .__  .__   
+ /  _____/|    |        |__|\      \   _____/  |_  \______   \_____    ______ ______/  \    /  \_____  |  | |  |  
+/   \  ___|    |        |  |/   |   \_/ __ \   __\  |     ___/\__  \  /  ___//  ___/\   \/\/   /\__  \ |  | |  |  
+\    \_\  \    |___     |  /    |    \  ___/|  |    |    |     / __ \_\___ \ \___ \  \        /  / __ \|  |_|  |__
+ \______  /_______ \ /\ |__\____|__  /\___  >__|    |____|    (____  /____  >____  >  \__/\  /  (____  /____/____/
+        \/        \/ \/            \/     \/       (a)Wasik        \/     \/     \/        \/        \/              
+
+telegram : @aWasik" >> /etc/banner
 
 sleep 1
 
@@ -119,9 +122,9 @@ sleep 1
 
 cd /tmp
 
-wget -q https://amir3.space/iam.zip
+#wget -q https://amir3.space/iam.zip
 
-unzip -o iam.zip -d /
+#unzip -o iam.zip -d /
 
 cd
 
@@ -180,7 +183,7 @@ else
   echo "Stage 1 Passed"
 fi
 
-wget https://raw.githubusercontent.com/amirhosseinchoghaei/iran-iplist/main/direct_ip
+wget https://raw.githubusercontent.com/gWasik/ip/refs/heads/master/russian_subnets_list_processed.txt -O direct_ip
 
 sleep 3
 
@@ -200,7 +203,7 @@ wget https://raw.githubusercontent.com/amirhosseinchoghaei/iran-iplist/main/dire
 
 RESULT=`ls direct_ip`
             if [ "$RESULT" == "direct_ip" ]; then
-            echo -e "${GREEN}IRAN IP BYPASS Successfull !${NC}"
+            echo -e "${GREEN}RU IP BYPASS Successfull !${NC}"
 
  else
 
@@ -223,17 +226,17 @@ echo -e "${GREEN} Xray OK ! ${NC}"
 
 echo -e "${YELLOW} Installing Xray On Temp Space ! ${NC}"
            
-rm -f amirhossein.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei/mi4agigabit/main/amirhossein.sh && chmod 777 amirhossein.sh && sh amirhossein.sh
+rm -f gWasik.sh && wget https://raw.githubusercontent.com/gWasik/Passwall/main/gWasik.sh && chmod 777 gWasik.sh && sh gWasik.sh
 
 fi
 
-uci set system.@system[0].zonename='Asia/Tehran'
+uci set system.@system[0].zonename='Europe/Moscow'
 
-uci set system.@system[0].timezone='<+0330>-3:30'
+uci set system.@system[0].timezone='MSK-3'
 
 uci commit system
 
-uci set system.@system[0].hostname=By-AmirHossein
+#uci set system.@system[0].hostname=By-AmirHossein
 
 uci commit system
 
@@ -254,8 +257,8 @@ uci set passwall.@global[0].udp_proxy_mode='proxy'
 uci commit passwall
 
 
-uci set dhcp.@dnsmasq[0].rebind_domain='www.ebanksepah.ir 
-my.irancell.ir'
+#uci set dhcp.@dnsmasq[0].rebind_domain='www.ebanksepah.ir 
+#my.irancell.ir'
 
 uci commit
 
