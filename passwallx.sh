@@ -14,7 +14,7 @@ clear
 
 uci set system.@system[0].zonename='Europe/Moscow'
 
-uci set system.@system[0].timezone='<+0300>+3:00'
+uci set system.@system[0].timezone='MSK-3'
 
 uci commit
 
