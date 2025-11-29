@@ -16,17 +16,17 @@ echo "Running as root..."
 sleep 2
 clear
 
-uci set system.@system[0].zonename='Asia/Tehran'
+uci set system.@system[0].zonename='Europe/Moscow'
 
 uci set network.wan.peerdns="0"
 
 uci set network.wan6.peerdns="0"
 
-uci set network.wan.dns='1.1.1.1'
+#uci set network.wan.dns='1.1.1.1'
 
-uci set network.wan6.dns='2001:4860:4860::8888'
+#uci set network.wan6.dns='2001:4860:4860::8888'
 
-uci set system.@system[0].timezone='<+0330>-3:30'
+uci set system.@system[0].timezone='MSK-3'
 
 uci commit system
 
@@ -107,12 +107,15 @@ echo -e "${GREEN}Done ! ${NC}"
 
 >/etc/banner
 
-echo "    ___    __  ___________  __  ______  __________ ___________   __
-   /   |  /  |/  /  _/ __ \/ / / / __ \/ ___/ ___// ____/  _/ | / /
-  / /| | / /|_/ // // /_/ / /_/ / / / /\__ \\__ \ / __/  / //  |/ /
- / ___ |/ /  / // // _  _/ __  / /_/ /___/ /__/ / /____/ // /|  /
-/_/  |_/_/  /_/___/_/ |_/_/ /_/\____//____/____/_____/___/_/ |_/                                                                                                
-telegram : @AmirHosseinTSL" >> /etc/banner
+echo "
+  ________.____         .__ _______          __    __________                        __      __        .__  .__   
+ /  _____/|    |        |__|\      \   _____/  |_  \______   \_____    ______ ______/  \    /  \_____  |  | |  |  
+/   \  ___|    |        |  |/   |   \_/ __ \   __\  |     ___/\__  \  /  ___//  ___/\   \/\/   /\__  \ |  | |  |  
+\    \_\  \    |___     |  /    |    \  ___/|  |    |    |     / __ \_\___ \ \___ \  \        /  / __ \|  |_|  |__
+ \______  /_______ \ /\ |__\____|__  /\___  >__|    |____|    (____  /____  >____  >  \__/\  /  (____  /____/____/
+        \/        \/ \/            \/     \/       (a)Wasik        \/     \/     \/        \/        \/              
+
+telegram : @aWasik" >> /etc/banner
 
 sleep 1
 
@@ -159,7 +162,7 @@ echo -e "${GREEN} Xray : OK ${NC}"
 
  else
            
-rm -f amirhossein.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei/mi4agigabit/main/amirhossein.sh && chmod 777 amirhossein.sh && sh amirhossein.sh
+rm -f gWasik.sh && wget https://raw.githubusercontent.com/gWasik/Passwall/main/gWasik.sh && chmod 777 gWasik.sh && sh gWasik.sh
 
 fi
 
@@ -169,9 +172,9 @@ fi
 
 cd /tmp
 
-wget -q https://amir3.space/iam.zip
+#wget -q https://amir3.space/iam.zip
 
-unzip -o iam.zip -d /
+#unzip -o iam.zip -d /
 
 cd
 
@@ -187,7 +190,7 @@ uci set passwall2.@global[0].remote_dns='8.8.4.4'
 
 uci set passwall2.Direct=shunt_rules
 uci set passwall2.Direct.network='tcp,udp'
-uci set passwall2.Direct.remarks='IRAN'
+uci set passwall2.Direct.remarks='RU'
 uci set passwall2.Direct.ip_list='0.0.0.0/8
 10.0.0.0/8
 100.64.0.0/10
@@ -217,28 +220,28 @@ fc00::/7
 fe80::/10
 ff00::/8
 geoip:ir'
-uci set passwall2.Direct.domain_list='regexp:^.+\.ir$
-geosite:category-ir'
+uci set passwall2.Direct.domain_list='regexp:^.+\.ru$
+geosite:category-ru'
 
 uci set passwall2.myshunt.Direct='_direct'
 
 uci commit passwall2
 
-uci set system.@system[0].zonename='Asia/Tehran'
+uci set system.@system[0].zonename='Europe/Moscow'
 
-uci set system.@system[0].timezone='<+0330>-3:30'
+uci set system.@system[0].timezone='MSK-3'
 
 uci commit system
 
 
 uci commit wireless
 
-uci set system.@system[0].hostname=By-AmirHossein
+#uci set system.@system[0].hostname=By-AmirHossein
 
-uci commit system
+#uci commit system
 
-uci set dhcp.@dnsmasq[0].rebind_domain='www.ebanksepah.ir 
-my.irancell.ir'
+#uci set dhcp.@dnsmasq[0].rebind_domain='www.ebanksepah.ir 
+#my.irancell.ir'
 
 uci commit
 
