@@ -103,6 +103,9 @@ sleep 2
 opkg install kmod-nft-tproxy
 sleep 2
 
+sleep 2
+opkg install mc htop btop iperf3
+
 >/etc/banner
 
 echo "
