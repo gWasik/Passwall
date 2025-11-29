@@ -93,6 +93,9 @@ opkg install kmod-netlink-diag
 sleep 1
 opkg install kmod-tun
 
+sleep 1
+opkg install mc htop btop iperf3
+
 >/etc/banner
 
 echo "
