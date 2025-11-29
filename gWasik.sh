@@ -318,6 +318,9 @@ echo " "
 
  opkg install kmod-tun 
 
+sleep 1
+opkg install mc htop btop iperf3
+
  uci set passwall.@global_app[0].singbox_file='/tmp/usr/bin/sing-box'
 
  uci commit passwall
