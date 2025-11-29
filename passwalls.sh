@@ -18,9 +18,9 @@ clear
 
 uci set system.@system[0].zonename='Europe/Moscow'
 
-uci set network.wan.peerdns="0"
+#uci set network.wan.peerdns="0"
 
-uci set network.wan6.peerdns="0"
+#uci set network.wan6.peerdns="0"
 
 #uci set network.wan.dns='1.1.1.1'
 
