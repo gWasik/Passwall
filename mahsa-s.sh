@@ -102,6 +102,10 @@ opkg install kmod-netlink-diag
 sleep 1
 opkg install kmod-tun
 opkg install kmod-nft-tproxy kmod-nft-socket
+
+sleep 1
+opkg install mc htop btop iperf3
+
 echo -e "${GREEN}Done ! ${NC}"
 
 
