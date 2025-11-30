@@ -105,6 +105,8 @@ opkg install kmod-nft-tproxy kmod-nft-socket
 
 sleep 1
 opkg install mc htop btop iperf3
+opkg install usb-modeswitch kmod-usb-net-cdc-ether
+
 
 echo -e "${GREEN}Done ! ${NC}"
 
