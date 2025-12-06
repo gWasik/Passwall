@@ -98,7 +98,7 @@ sleep 1
 opkg install ipset
 
 sleep 1
-opkg install mc htop btop iperf3 kmod-tcp-bbr
+opkg install mc htop btop iperf3 kmod-tcp-bbr openssh-server openssh-sftp-server
 
 >/etc/banner
 
